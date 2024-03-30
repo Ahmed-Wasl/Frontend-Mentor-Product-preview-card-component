@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* Start Variables */
+:root {
+  --body-color: hsl(30, 38%, 92%);
+  --dark-cyan: hsl(158, 36%, 37%);
+  --very-dark-blue-color: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white-color: white;
+}
+/* End Variables */
+/* Start Global Rules */
+:is(*, *::before, *::after) {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--body-color);
+  font-family: "", sans-serif;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+h1,
+p.card-product__product-discount-price {
+  font-family: "Fraunces", serif;
+}
+/* End Global Rules */
+
+.card-product {
+  display: grid;
+  grid-template-columns: repeat(2, 350px);
+  background-color: var(--white-color);
+  border-radius: 15px;
+}
+.card-product
+  picture.card-product__product-img-container
+  img.card-product__product-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 0 0 15px;
+}
+.card-product .card-product__details {
+  padding: 30px;
+}
+.card-product .card-product__details h2.card-product__product-brand {
+  color: var(--dark-grayish-blue);
+  letter-spacing: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.card-product .card-product__details h1.card-product__product-name {
+  font-size: 40px;
+  line-height: 1;
+}
+.card-product .card-product__details p.card-product__product-bio {
+  color: var(--dark-grayish-blue);
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.card-product .card-product__details .card-product__product-price {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  column-gap: 20px;
+  align-items: center;
+}
+.card-product
+  .card-product__details
+  .card-product__product-price
+  p.card-product__product-discount-price {
+  color: var(--dark-cyan);
+  font-size: 35px;
+  font-weight: 800;
+}
+.card-product
+  .card-product__details
+  .card-product__product-price
+  p.card-product__product-actual-price {
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+}
+.card-product .card-product__details button.card-product__produc-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding-block: 20px;
+  background-color: var(--dark-cyan);
+  color: var(--white-color);
+  border: 0;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.card-product .card-product__details button.card-product__produc-btn svg {
+  margin: 0 5px -1px;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    padding: 10px;
+  }
+  .card-product {
+    display: block;
+  }
+  .card-product picture.card-product__product-img-container img.card-product__product-img {
+    border-radius: 15px 15px 0 0;
+  }
+  .card-product .card-product__details {
+    padding: 20px;
+  }
+}
